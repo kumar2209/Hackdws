@@ -1,13 +1,10 @@
 node("master"){
 
 "Checkout": {    
-      stage("Checkout") {
-           ws("$LOCATION") {
-                            cleanWs()
-                            withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'git_pass', usernameVariable: 'git_user')]){
-                                checkout([$class: 'GitSCM', branches: [[name: '*/${BRANCH}']], doGenerateSubmoduleConfigurations: false, submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: "$PLAYBOOKS_REPO"]]])
-                            }
-                        }
-                    }
-                }
-               }
+   stage("Checkout") {
+        cleanWs()
+       checkout([$class: 'GitSCM', branches: [[name: '*/${BRANCH}']], doGenerateSubmoduleConfigurations: false, submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: "$PLAYBOOKS_REPO"]]])
+
+             }
+           }
+         }
