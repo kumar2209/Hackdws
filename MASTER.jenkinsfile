@@ -5,8 +5,7 @@ pipeline {
    stages{
       stage('checkout'){
          steps { 
-         cleanWs()
-         checkout([$class: 'GitSCM', branches: [[name: '*/${BRANCH}']], doGenerateSubmoduleConfigurations: false, submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: "$PLAYBOOKS_REPO"]]])
+         git 'https://github.com/kumar2209/Hackdws.git'
          }
       }
    }
