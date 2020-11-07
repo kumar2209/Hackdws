@@ -1,5 +1,7 @@
 pipeline {
-   node("master")
+
+   agent any
+   
    stages{
       stage('checkout'){
          steps { 
