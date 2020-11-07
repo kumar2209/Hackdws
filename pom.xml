@@ -15,7 +15,8 @@
 
     <properties>
         <hypermodel.output.dir>${project.basedir}/deploy/</hypermodel.output.dir>
-        <hypermodel.id>none</hypermodel.id>
+        <hypermodel.id>ml-sdk-lesson-1</hypermodel.id>
+	<hypermodel.id>ml-sdk-lesson-2</hypermodel.id>
         <ml.sdk.version>9.2.0.11</ml.sdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipObfuscation>true</skipObfuscation>
