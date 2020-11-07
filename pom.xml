@@ -14,7 +14,7 @@
     <version>1.0</version>
 
     <properties>
-        <hypermodel.output.dir>${basedir}/deploy/</hypermodel.output.dir>
+        <hypermodel.output.dir>${project.basedir}/deploy/</hypermodel.output.dir>
         <hypermodel.id>none</hypermodel.id>
         <ml.sdk.version>9.2.0.11</ml.sdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,8 +29,9 @@
     </modules>
 
     <dependencies>
+	<!--     
         <dependency>
-<!--            <groupId>com.workfusion.ml</groupId>  -->
+           <groupId>com.workfusion.ml</groupId>  
             <artifactId>nlp-uima-hypermodel</artifactId>
             <version>${ml.sdk.version}</version>
             <exclusions>
@@ -40,6 +41,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+	 -->
         <dependency>
             <groupId>org.xmlunit</groupId>
             <artifactId>xmlunit-core</artifactId>
